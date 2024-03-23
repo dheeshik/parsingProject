@@ -39,7 +39,7 @@ public class Main {
 
     ReviewContentParser parser = new ReviewContentParser();
     try {
-      parse.GetGoodReviews("./socialmediaposts.csv");
+      parser.GetGoodReviews("./socialmediaposts.csv");
       AdGenerator gen = new AdGenerator();
       gen.generateTargetedAdd(parser.foundWords, "socialmediaposts2.csv");
     } catch (IOException e) {
